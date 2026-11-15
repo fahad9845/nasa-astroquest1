@@ -1,0 +1,13 @@
+import {BedDouble,Wind,Sprout,Zap,Wrench,FlaskConical,Package,DoorOpen} from 'lucide-react';
+export const rooms=[
+ {id:'crew',name:'Crew Quarters',short:'Crew',icon:BedDouble,number:'01',purpose:'A place to rest. A team ready for tomorrow.',science:'Rest is a mission resource too. Recovery improves the shared crew health index and lowers accumulated fatigue.',topic:'safety',resource:'health'},
+ {id:'support',name:'Life Support',short:'Life support',icon:Wind,number:'02',purpose:'A little Earth, inside your habitat.',science:'Air revitalization removes contaminants. Water recovery and electrolysis connect clean water, oxygen and electrical power.',topic:'life-support',resource:'oxygen'},
+ {id:'greenhouse',name:'Greenhouse',short:'Greenhouse',icon:Sprout,number:'03',purpose:'Something green, a long way from home.',science:'Plants need light, water, nutrients and a controlled environment. This small crop supplements packed food; it cannot feed the crew by itself.',topic:'water',resource:'food'},
+ {id:'power',name:'Power Station',short:'Power',icon:Zap,number:'04',purpose:'Turn a little sunlight into another day.',science:'Generation, battery storage and distribution are different systems. Your equipment condition and assumed sunlight affect daily generation.',topic:'power',resource:'power'},
+ {id:'garage',name:'Rover Garage',short:'Garage',icon:Wrench,number:'05',purpose:'Prepare the equipment. Explore with care.',science:'A surface survey uses power and wears equipment. Its game cost comes from measured regional relief in the NASA LOLA raster.',topic:'terrain',resource:'equipment'},
+ {id:'lab',name:'Laboratory',short:'Lab',icon:FlaskConical,number:'06',purpose:'Turn every decision into a discovery.',science:'Your reviewed decision debriefs and completed terrain surveys form the mission’s scientific record.',topic:'terrain',resource:'equipment'},
+ {id:'storage',name:'Equipment Storage',short:'Storage',icon:Package,number:'07',purpose:'Small reserves. A meaningful safety margin.',science:'Stored supplies bridge interruptions. Equipment maintenance protects oxygen generation, recycling and solar output.',topic:'habitat',resource:'equipment'},
+ {id:'airlock',name:'Airlock',short:'Airlock',icon:DoorOpen,number:'08',purpose:'The boundary between home and the Moon.',science:'A lunar surface excursion needs preparation and radiation protection. Resolve the current advisory before assigning outside work.',topic:'radiation',resource:'shielding'},
+] as const;
+export type RoomId=typeof rooms[number]['id'];
+export const roomFor=(id:string)=>rooms.find(room=>room.id===id)??rooms[0];

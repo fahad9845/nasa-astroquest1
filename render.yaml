@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: astroquest-api
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npx prisma generate --schema prisma/schema.prisma && npm run build
+    startCommand: npx prisma migrate deploy --schema prisma/schema.prisma && npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: WEB_ORIGIN
+        sync: false
+      - key: COOKIE_SAME_SITE
+        value: none

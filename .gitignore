@@ -1,0 +1,45 @@
+# Dependencies and generated builds
+node_modules/
+dist/
+.vite/
+*.tsbuildinfo
+
+# Local configuration; keep the setup template in Git
+.env
+.env.*
+!.env.example
+
+# Local account data and database sidecars
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite3-journal
+*.sqlite3-wal
+*.sqlite3-shm
+
+# Generated reports, caches, packages and downloaded debriefs
+playwright-report/
+test-results/
+coverage/
+.cache/
+outputs/
+*.log
+*.tar.gz
+astroquest-mission-debrief*.json
+
+# Machine-specific hosting state and private keys
+.openai/
+.vercel/
+*.pem
+*.key
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,1 @@
+export const illuminationReference={image:'/nasa/south-pole-illumination.jpg',source:'https://svs.gsfc.nasa.gov/5027',attribution:'NASA/Goddard Space Flight Center Scientific Visualization Studio',kind:'scientific visualization',numericIrradiance:false} as const;

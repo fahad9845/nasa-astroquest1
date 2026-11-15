@@ -1,0 +1,23 @@
+/* ORBITAL — shared observatory palette. Keep game semantics independent of color. */
+:root {
+  color-scheme: dark;
+  --space: #070b12;
+  --surface: #0b111b;
+  --surface-raised: #101827;
+  --surface-soft: #172337;
+  --text: #f5f8ff;
+  --secondary: #9baac2;
+  --blue: #68b5ff;
+  --cyan: #80e5e7;
+  --violet: #9a8aff;
+  --success: #8bd9ba;
+  --warning: #efbe83;
+  --danger: #ffaaa5;
+  --line: #253348;
+  --muted: var(--secondary);
+  --border: var(--line);
+  --focus: 0 0 0 3px #68b5ff45;
+  --heading: 'Space Grotesk', sans-serif;
+  color: var(--text);
+  background: var(--space);
+}
